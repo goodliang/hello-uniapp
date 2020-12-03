@@ -15,5 +15,6 @@ class User {
       url: '/user/logout.do'
     });
   }
+  userList() {}
 }
 export default User;
