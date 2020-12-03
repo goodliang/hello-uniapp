@@ -1,0 +1,27 @@
+.view-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  .view-nav {
+    width: 220px;
+    height: 100%;
+    background: #001529;
+  }
+  .view-header {
+    background: #fff;
+    height: 60px;
+  }
+  .view-container {
+    background: #f1f1f1;
+    flex: 1;
+    .view-body {
+      padding: 20px;
+      height: calc(100% - 120px);
+    }
+  }
+  .view-footer {
+    background: #fff;
+    height: 60px;
+  }
+}
