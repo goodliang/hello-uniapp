@@ -2,9 +2,10 @@
  * @Author: goodLiang
  * @Date: 2020-11-27 14:30:41
  * @LastEditors: goodLiang
- * @LastEditTime: 2020-12-03 19:28:28
+ * @LastEditTime: 2020-12-05 15:58:07
  */
 import React, { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import User from '../../service/user.jsx';
 import Utils from '../../utils/index.jsx';
 const _Utils = new Utils();
@@ -52,7 +53,7 @@ class Login extends Component {
           this.props.history.push(this.state.redireat);
         })
         .catch((err) => {
-          _Utils.tips(err.msg);
+          toast.error(err.msg);
         });
     } else {
       _Utils.tips(checkout.msg);
@@ -98,6 +99,7 @@ class Login extends Component {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     );
   }

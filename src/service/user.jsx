@@ -15,6 +15,14 @@ class User {
       url: '/user/logout.do'
     });
   }
-  userList() {}
+  userList(pageNum) {
+    return _Utils.http({
+      url: '/manage/user/list.do',
+      methods: 'post',
+      data: {
+        pageNum: pageNum
+      }
+    });
+  }
 }
 export default User;
